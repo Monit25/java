@@ -1,1 +1,337 @@
+XML File for Prac 6 
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Address"
+                android:inputType="textMultiLine" />
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Age"
+                android:inputType="number" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dob"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="DOB"
+                    android:inputType="textPersonName"
+                    android:onClick="setDob" />
+
+                <Button
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3AA0E4"
+                    android:onClick="setDob"
+                    android:text="Pick a Date" />
+            </LinearLayout>
+            <Spinner
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                style="@android:style/Widget.Holo.Light.Spinner" />
+            <!--                style="@android:style/Widget.Spinner"-->
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#1165BF"
+                android:text="Submit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="200dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center_horizontal"
+                    android:text="Your Details"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/ans_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:hint="Username"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ans_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Password"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ans_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Address"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/ans_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Gender"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ans_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Age"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ans_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Date of Birth"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ans_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="State"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+JAVA File for Prac6
+package com.example.prac6;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
+public class MainActivity extends AppCompatActivity {
+
+    ArrayList<String> states = new ArrayList<String>();
+    public static TextView dob;
+    public static Button submit;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ScrollView scrollView = findViewById(R.id.scrollView);
+
+        dob = findViewById(R.id.dob);
+        submit = findViewById(R.id.submit);
+        Button date_picker = findViewById(R.id.date_picker);
+        TextView username = findViewById(R.id.username);
+        TextView password = findViewById(R.id.password);
+        TextView address = findViewById(R.id.address);
+        TextView age = findViewById(R.id.age);
+        RadioGroup gender = findViewById(R.id.gender);
+        Spinner spinner = findViewById(R.id.state);
+
+        TextView ans_username = findViewById(R.id.ans_username);
+        TextView ans_password = findViewById(R.id.ans_password);
+        TextView ans_address = findViewById(R.id.ans_address);
+        TextView ans_gender = findViewById(R.id.ans_gender);
+        TextView ans_age = findViewById(R.id.ans_age);
+        TextView ans_dob = findViewById(R.id.ans_dob);
+        TextView ans_state = findViewById(R.id.ans_state);
+
+        states.add("--- Select State ---");
+        states.add("Gujarat");
+        states.add("Maharashtra");
+        states.add("Rajasthan");
+        states.add("Karnataka");
+        states.add("Kerala");
+        states.add("Tamil Nadu");
+        states.add("Andhra Pradesh");
+        states.add("Telangana");
+        states.add("Madhya Pradesh");
+        states.add("Uttar Pradesh");
+        states.add("Bihar");
+        states.add("Jharkhand");
+        states.add("West Bengal");
+        states.add("Assam");
+        states.add("Manipur");
+        states.add("Meghalaya");
+        states.add("Mizoram");
+        states.add("Nagaland");
+        states.add("Sikkim");
+        //        Adapter
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, states) {
+            @Override
+            public boolean isEnabled(int position) {
+                return position != 0;
+            }
+
+            @Override
+            public View getDropDownView(int position, View convertView, @NonNull ViewGroup parent) {
+
+                View view = super.getDropDownView(position, convertView, parent);
+                TextView textView = (TextView) view;
+                if (position == 0) {
+                    textView.setTextColor(Color.GRAY);
+                } else {
+                    textView.setTextColor(Color.BLACK);
+                }
+                return view;
+            }
+        };
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                scrollView.scrollTo(0, scrollView.getScrollY() + 5000);
+                ans_username.setText("Username: " + username.getText().toString());
+                ans_password.setText("Password: " + password.getText().toString());
+                ans_address.setText("Address: " + address.getText().toString());
+                ans_gender.setText("Gender: " + ((RadioButton)findViewById(gender.getCheckedRadioButtonId())).getText().toString());
+                ans_age.setText("Age: " + age.getText().toString());
+                ans_dob.setText("DOB: " + dob.getText().toString());
+                ans_state.setText("State: " + spinner.getSelectedItem().toString());
+            }
+        });
+    }
+
+    public void setDob(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    //    Date picker
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            return new DatePickerDialog(requireContext(), this, year, month, day);
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day)
+        {
+            dob.setText(day + "/" + (month + 1) + "/" + year);
+        }
+    }
+}
+
 
